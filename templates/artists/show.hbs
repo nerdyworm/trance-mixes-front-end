@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1>{{name}}</h1>
+</div>
+<div class="page-body row">
+  <div class="span4 columns">
+    <div class="photo">
+      <img src="{{photo}}" alt="{{name}}" width="100%"/>
+    </div>
+    <dl class="fields links">
+    {{#links}}
+      <dt>{{ label }}</dt>
+      <dd><a href="{{url}}" target="_blank">{{ text }}</a></dd>
+    {{/links}}
+    </dl>
+  </div>
+  <div class="span12 columns">
+
+    {{#if bio}}
+      <div class="bio">
+        <h5>bio</h5>
+        {{{ bio }}}
+      </div>
+    {{/if}}
+
+    {{> mixes}}
+  </div>
+</div>

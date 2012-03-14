@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h1>Your most recent listens</h1>
+</div>
+
+<div class="mixes">
+{{#listens}}
+  {{#mix}}
+    <div class="mix {{listen_state}}" data-id="{{id}}">
+      {{> mix}}
+      {{started_at}}
+      {{finished_at}}
+    </div>
+  {{/mix}}
+{{/listens}}
+</div>

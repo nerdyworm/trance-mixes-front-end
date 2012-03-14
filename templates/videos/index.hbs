@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Trance Videos</h1>
+</div>
+<div class="page-body">
+  <div id="videos">
+    {{#videos}}
+    <div id="video-{{id}}" class="video">
+      <div class="pad">
+        <div class="preview">
+          <a href="/videos/{{id}}" class="play" data-id="{{id}}">
+            <img src="{{full}}" alt="{{title}}" width="288" height="216"/>
+          </a>
+        </div>
+        <div class="info">
+          <h2><a href="/videos/{{id}}" class="navigate">{{title}}</a></h2>
+          <h3>{{artist}}</h3>
+          <p><a href="{{link}}" target="_blank">{{link}}</a></p>
+          <p><span class="genre {{genre}}">{{genre}}</span></p>
+          <p>posted {{published}}</p>
+        </div>
+      </div>
+    </div>
+    {{/videos}}
+  </div>
+</div>

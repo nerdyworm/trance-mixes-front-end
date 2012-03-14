@@ -1,0 +1,13 @@
+<li class="genre">
+  <a href="/" class="clear active link">
+    <span class="genre clear_active">all</span>
+  </a>
+</li>
+{{#genres}}
+  <li class="genre">
+    <a href="/genres/{{name}}/mixes" class="link {{active}}" data-genre="{{name}}">
+      <span class="genre {{name}}">{{name}}</span>
+    </a>
+  </li>
+{{/genres}}
+

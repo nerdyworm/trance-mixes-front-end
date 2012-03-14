@@ -1,0 +1,42 @@
+// This is a manifest file that'll be compiled into including all the files listed below.
+// Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
+// be included in the compiled file accessible from http://example.com/assets/application.js
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+//= require_self
+//= require jquery-ui
+//= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require handlebars.runtime
+//= require mustache
+//= require soundmanager2
+//= require soundmanager2.config
+//= require jquery.tipsy
+//= require bootstrap-alert
+//= require ./models/source
+//= require_tree ./models/
+//= require ./collections/cached
+//= require_tree ./collections/
+//= require ./views/base_mix_view
+//= require ./views/trance_view
+//= require ./views/mix_view
+//= require_tree ./views/
+//= require player/player
+//= require_tree ./routers/
+//= require_tree .
+
+var JST={};
+JST.mustache = {};
+
+tm = {
+  genres: [
+  <% Mix::Genres.each do |g| %>
+    '<%= g %>',
+  <% end %>
+  ]
+  , routers: { }
+  , collections: { }
+  , models: { }
+};

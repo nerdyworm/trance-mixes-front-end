@@ -1,0 +1,19 @@
+<div class="mixes">
+  <h5>mixes</h5>
+  {{#mixes}}
+    <div class=" mix {{listen_state}}" data-id="{{id}}">
+      {{> mix}}
+    </div>
+  {{/mixes}}
+  {{^mixes}}
+    <div>
+      <span>sorry no mixes to show you :(</span>
+    </div>
+  {{/mixes}}
+  <div id="loading" style="text-align: center; display: none">
+    <a href="#" class='btn disabled'>loading more mixes...</a>
+  </div>
+  <div id="loadmore" style="text-align: center">
+    <a href="#" id="load" class='btn'>load more</a>
+  </div>
+</div>

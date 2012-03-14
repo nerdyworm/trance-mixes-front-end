@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h1>
+    {{name}}
+  </h1>
+</div>
+
+<div class="row">
+
+  <div class="span12 columns">
+    <div class="summary">
+      {{{ summary }}}
+    </div>
+    <br style="clear: both"/>
+    <dl class="fields links">
+      <dt>artist</dt>
+      <dd>
+        {{#artists}}
+          <a href="/artists/{{id}}" class="navigate">{{ name }}</a>
+        {{/artists}}
+        {{^artists}}
+          {{artist}}
+        {{/artists}}
+      </dd>
+      <dt>website</dt>
+      <dd><a href="{{website}}" target="_blank">{{ website }}</a></dd>
+      <dt>subscribe</dt>
+      <dd><a href="{{source_url}}" target="_blank">{{ source_url }}</a></dd>
+    </dl>
+
+    <br style="clear: both"/>
+
+    {{> mixes}}
+  </div>
+
+  <div class="span4 columns">
+    <div class="art">
+      {{{art_image}}}
+    </div>
+  </div>
+
+</div>

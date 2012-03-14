@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1>Artists</h1>
+</div>
+<div class="page-body row">
+  <div class="span16 columns">
+    <table class="bordered-table zebra-striped">
+      <thead>
+        <tr>
+          <th></td>
+          <th>name</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#artists}}
+        <tr class="artist" id="artist_{{id}}">
+          <td class="art">
+            <img src="{{thumb}}" alt={{name}}/>
+          </td>
+          <td class="name">
+            <a href="/artists/{{id}}" class="navigate">{{name}}</a>
+          </td>
+        </tr>
+      {{/artists}}
+      </tbody>
+    </table>
+  </div>
+</div>

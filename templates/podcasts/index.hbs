@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1>Trance Podcasts</h1>
+</div>
+<div class="page-body row">
+  <div class="span16">
+    <ul class="media-grid">
+    {{#podcasts}}
+      <li class="podcast" id="podcast_{{id}}" title="{{title_text}}">
+        <a href="/podcasts/{{id}}" class="navigate">
+          <img src="{{image}}" alt="{{name}}"/>
+          <div class="panel">
+            <span class="genre {{genre}}">{{genre}}</span>
+            <span class="count">{{mixes_count}}</span>
+          </div>
+        </a>
+      </li>
+    {{/podcasts}}
+    </ul>
+  </div>
+</div>

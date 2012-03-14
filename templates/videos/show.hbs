@@ -1,0 +1,17 @@
+
+<div class="header">
+  <a href="#close" class="btn danger stop-video">Close</a>
+  <h1>{{title}} <small>{{artist}}</small></h1>
+</div>
+<div class="page-body">
+  <div id="video-{{id}}" class="video big-video row">
+    <div class="span16 columns">
+      <div class="video-container" style="width: 855px; height: 480px">
+        <iframe class="youtube-player" type="text/html" width="855" height="480" src="http://www.youtube.com/embed/{{youtube_id}}?autoplay=1" frameborder="0">
+        </iframe>
+      </div>
+      <a href="#next" class="btn primary next">Next</a>
+      <a href="#prev" class="btn primary prev">Prev</a>
+    </div>
+  </div>
+</div>

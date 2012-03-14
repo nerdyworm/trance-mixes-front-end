@@ -1,0 +1,63 @@
+<div class="page-header">
+  <h1>
+    <span class="title">{{title}}</span>
+    <span class="pagination" style="font-size: 12px; float:right; margin: 0">
+      <ul>
+        <li class="prev">
+          <a href="#" id="prev">&larr; Previous</a>
+        </li>
+        <li class="next">
+          <a href="#" id="next">Next &rarr;</a>
+        </li>
+      </ul>
+    </span>
+  </h1>
+  <h1 style="line-height: 32px; padding: 5px;" class="well">
+    <a href="#" class="play" style="vertical-align: middle">Play</a>
+    <img src="{{waveform}}" class="waveform" style="vertical-align: middle;"/>
+  </h1>
+</div>
+<div class="row">
+  <div class="span16 columns">
+  </div>
+</div>
+<div class="row">
+  <div class="span4 columns">
+    <div class="art">
+      {{{art_image}}}
+    </div>
+  </div>
+  <div class="span12 columns">
+    <dl class="fields">
+      <dt>listens</dt>
+      <dd>{{{listens}}}</dd>
+      <dt>duration</dt>
+      <dd>{{ duration }}</dd>
+      <dt>released</dt>
+      <dd>{{ published }} </dd>
+      <dt>genre</dt>
+      <dd><span class="genre {{ genre }}">{{genre}}</span></dd>
+    </dl>
+    <dl class="fields">
+      <dt>artist</dt>
+      <dd>
+      {{#artists}}
+        <a href="/artists/{{id}}" class="navigate">{{name}}</a>
+      {{/artists}}
+      {{^artists}}
+        {{artist}}
+      {{/artists}}
+      </dd>
+      <dt>{{source_type}}</dt>
+      <dd>{{{ source_link }}}</dd>
+      <dt>download</dt>
+      <dd>{{{ download_link }}}</dd>
+    </dl>
+
+    <br style="clear: both"/>
+
+    <div class="summary">
+      {{{ summary }}}
+    </div>
+  </div>
+</div>
